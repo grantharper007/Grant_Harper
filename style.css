@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+
+    /* "    box-sizing: border-box;" includes padding and border when setting a width or height  */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    line-height: 1.5;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+}
+
+a {
+    text-decoration: none;
+}
