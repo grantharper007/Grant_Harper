@@ -21,3 +21,73 @@ h1 {
 a {
     text-decoration: none;
 }
+
+#main {
+    /* VH (viewport height) determines the height of an element by setting it to a percentage of the viewport (NOTE: VW is used for width) */
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    /* NOTE: the following align-items & justify-content styles will only end up applying to the "content" div (AKA The third div) */
+    align-items: center;
+    justify-content: center;
+
+    /* So the text does NOT go up against the left and right edges on smaller screen sizes */
+    padding: 0px 20px;
+
+    /* Setting "position: relative;" here so #video-container div will be positioned relative to this element instead of the Root (AKA HTML) element */
+    position: relative;
+}
+
+#video-container {
+    /* First frame of the video in case the video does NOT immediately start playing */
+    background-image: url("frame.png");
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    background-position: center;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    
+    /* The object-fit property determines how a video/image is resized to fit inside of its container (AKA Parent Element). Setting the value to "cover" causes the video to retain its aspect ratio and fill the given dimension. (NOTE: in this case causes the video to still take up the vertical spae on smaller screen sizes */
+    object-fit: cover;
+}
+
+#cover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+#content {
+    color: white;
+    text-align: center;
+    z-index: 1;
+}
+
+#click {
+    /* Inline-Block allows you to set top and bottom margin as well as height and width. This is NOT the case with Inline. */
+    display: inline-block;
+    border: 2px solid white;
+    padding: 10px 30px;
+    margin-top: 25px;
+    background-color: #4b516388;
+    /* Unlike other elements a tags do NOT inherit the color property */
+    color: white;
+    font-size: 20px;
+    border-radius: 80px;
+}
+
+#click:hover {
+    /* Changes the size of an element */
+    transform: scale(0.95);
+}
