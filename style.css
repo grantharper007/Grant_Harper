@@ -15,12 +15,14 @@ body {
 h1 {
     font-weight: 400;
     font-size: 60px;
-    line-height: 1;
+    line-height: 1.5;
 }
 
 a {
     text-decoration: none;
 }
+
+/* MAIN SECTION */
 
 #main {
     /* VH (viewport height) determines the height of an element by setting it to a percentage of the viewport (NOTE: VW is used for width) */
@@ -90,4 +92,27 @@ video {
 #click:hover {
     /* Changes the size of an element */
     transform: scale(0.95);
+    border-color: cornflowerblue;
+}
+
+/* ABOUT SECTION */
+
+#about {
+    text-align: center;
+    padding: 50px;
+}
+
+#about > p{
+    font-size: 20px;
+}
+
+#about > h2 {
+    margin: 30px;
+    color: #4b5163;
+}
+
+i {
+    color: #4b5163;
+    font-size: 48px;
+    margin: 0px 5px;
 }
